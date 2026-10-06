@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updateCountdown();
   setInterval(updateCountdown, 1000);
 
-  const form = document.getElementById('messageForm');
+  const messageForm = document.getElementById('messageForm');
   const messageList = document.getElementById('messageList');
 
   function renderMessages() {
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  form.addEventListener('submit', (e) => {
+  messageForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const nameInput = document.getElementById('guestName');
