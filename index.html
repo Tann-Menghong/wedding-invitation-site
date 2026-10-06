@@ -10,11 +10,17 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Khmer&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="hero" id="top">
+      <div class="hero-glow hero-glow-one"></div>
+      <div class="hero-glow hero-glow-two"></div>
+
       <nav class="topbar">
         <div class="brand">Tann & Sokha</div>
         <div class="nav-links">
@@ -29,11 +35,14 @@
         <p class="eyebrow">សិរីមង្គលអាពាហ៍ពិពាហ៍</p>
         <h1>
           <span>តាន់ ម៉េងហុង</span>
-          <span class="and">&</span>
+          <span class="amp">&</span>
           <span>អ៊ុក សុខខា</span>
         </h1>
-        <p class="date-line">ថ្ងៃសៅរ៍ ទី២៦ ខែធ្នូ ឆ្នាំ២០២៦</p>
-        <p class="time-line">ម៉ោង ៧:០០ ព្រឹក</p>
+
+        <div class="date-wrap">
+          <p>ថ្ងៃសៅរ៍ ទី២៦ ខែធ្នូ ឆ្នាំ២០២៦</p>
+          <p class="time-line">ម៉ោង ៧:០០ ព្រឹក</p>
+        </div>
 
         <div class="countdown" aria-label="Wedding countdown">
           <div class="count-box">
@@ -57,19 +66,19 @@
     </header>
 
     <main>
-      <section class="invite section-card" id="story">
+      <section class="invitation section-card" id="story">
         <div class="section-head">
           <p class="kicker">សេចក្តីអញ្ជើញ</p>
           <h2>Warm Invitation</h2>
         </div>
 
         <div class="families">
-          <div>
+          <div class="family-card">
             <h3>គ្រួសារកូនប្រុស</h3>
             <p>លោក តាន់ ម៉ៅ</p>
             <p>អ្នកស្រី ឈុំ ឡាវិន</p>
           </div>
-          <div>
+          <div class="family-card">
             <h3>គ្រួសារកូនស្រី</h3>
             <p>លោក អ៊ុក ធឿន</p>
             <p>អ្នកស្រី ទឹម លីន</p>
@@ -78,9 +87,20 @@
 
         <p class="invite-text">
           យើងខ្ញុំមានកិត្តិយសសូមគោរពអញ្ជើញ លោក លោកស្រី អ្នកនាងកញ្ញា
-          អញ្ជើញចូលរួមក្នុងពិធីមង្គលអាពាហ៍ពិពាហ៍ របស់យើងខ្ញុំ ដើម្បីជាកិត្តិយស
+          អញ្ជើញចូលរួមក្នុងពិធីមង្គលអាពាហ៍ពិពាហ៍ របស់យើងខ្ញុំ ដ��ម្បីជាកិត្តិយស
           និងប្រសិទ្ធពរជ័យ។
         </p>
+      </section>
+
+      <section class="story-band">
+        <div class="story-card">
+          <p class="mini-title">Our Story</p>
+          <h3>Two hearts, one beautiful beginning</h3>
+          <p>
+            From the first chapter of our journey to the moment we say “forever,”
+            every step has been filled with love, trust, and gratitude.
+          </p>
+        </div>
       </section>
 
       <section class="schedule section-card" id="schedule">
@@ -89,22 +109,22 @@
           <h2>Wedding Program</h2>
         </div>
 
-        <div class="timeline">
-          <div class="time-item">
+        <div class="schedule-items">
+          <div class="schedule-item">
             <span class="time">07:00 AM</span>
-            <span class="label">ពិធីហែជំនូន</span>
+            <span class="event">ពិធីហែជំនូន</span>
           </div>
-          <div class="time-item">
+          <div class="schedule-item">
             <span class="time">08:30 AM</span>
-            <span class="label">ពិធីកាត់សក់</span>
+            <span class="event">ពិធីកាត់សក់</span>
           </div>
-          <div class="time-item">
+          <div class="schedule-item">
             <span class="time">10:00 AM</span>
-            <span class="label">ពិធីសំពះផ្ទឹម</span>
+            <span class="event">ពិធីសំពះផ្ទឹម</span>
           </div>
-          <div class="time-item">
+          <div class="schedule-item">
             <span class="time">05:00 PM</span>
-            <span class="label">ពិធីជប់លៀង</span>
+            <span class="event">ពិធីជប់លៀង</span>
           </div>
         </div>
       </section>
@@ -115,12 +135,26 @@
           <h2>Venue</h2>
         </div>
 
-        <div class="venue-box">
+        <div class="venue-content">
           <h3>សណ្ឋាគារ ភ្នំពេញ</h3>
           <p>មហាវិថីព្រះមុនីវង្ស រាជធានីភ្នំពេញ</p>
           <div class="venue-actions">
-            <a class="button primary" href="https://maps.google.com/?q=Phnom+Penh+Hotel" target="_blank" rel="noreferrer">បើកផែនទី Google Maps</a>
-            <a class="button secondary" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%E1%9E%9F%E1%9E%B7%E1%9E%9A%E1%9E%98%E1%9E%98%E1%9E%87%E1%9E%9C%E1%9E%91%E1%9E%9F%E1%9E%89%E1%9E%85%E1%9E%98%E1%9E%87%E1%9E%95%E1%9E%A6%E1%9E%9E%E1%9E%B8%E1%9E%9A%E1%9E%9E%E1%9E%B6%E1%9E%9A%E1%9E%9B%E1%9E%9A&details=Wedding+Celebration+of+Tann+Menghong+and+Ouk+Sokha&location=Phnom+Penh+Hotel&dates=20261226T070000Z/20261226T170000Z" target="_blank" rel="noreferrer">រក្សាទុកក្នុងប្រតិទិន</a>
+            <a
+              class="button primary"
+              href="https://maps.google.com/?q=Phnom+Penh+Hotel"
+              target="_blank"
+              rel="noreferrer"
+            >
+              បើកផែនទី Google Maps
+            </a>
+            <a
+              class="button secondary"
+              href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%E1%9E%9F%E1%9E%B7%E1%9E%9A%E1%9E%98%E1%9E%98%E1%9E%87%E1%9E%9C%E1%9E%91%E1%9E%9F%E1%9E%89%E1%9E%85%E1%9E%98%E1%9E%87%E1%9E%95%E1%9E%A6%E1%9E%9E%E1%9E%B8%E1%9E%9A%E1%9E%9E%E1%9E%B6%E1%9E%9A%E1%9E%9B%E1%9E%9A&details=Wedding+Celebration+of+Tann+Menghong+and+Ouk+Sokha&location=Phnom+Penh+Hotel&dates=20261226T070000Z/20261226T170000Z"
+              target="_blank"
+              rel="noreferrer"
+            >
+              រក្សាទុកក្នុងប្រតិទិន
+            </a>
           </div>
         </div>
       </section>
@@ -131,7 +165,9 @@
           <h2>Dress Code</h2>
         </div>
 
-        <p class="dress-copy">សូមស្លៀកពាក់តាមពណ៌ទាំងនេះ ដើម្បីរួមគ្នាបង្កើតអនុស្សាវរីយ៍ដ៏ស្រស់ស្អាត</p>
+        <p class="dress-copy">
+          សូមស្លៀកពាក់តាមពណ៌ទាំងនេះ ដើម្បីរួមគ្នាបង្កើតអនុស្សាវរីយ៍ដ៏ស្រស់ស្អាត
+        </p>
 
         <div class="palette">
           <span class="swatch gold">Gold</span>
